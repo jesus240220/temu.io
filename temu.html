@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Producto</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+}
+
+/* CONTENEDOR GENERAL */
+.container{
+    max-width:500px;
+    margin:auto;
+    background:#fff;
+    min-height:100vh;
+}
+
+/* IMAGEN */
+.product-image{
+    width:100%;
+    height:400px;
+    background:url('Imagenes/collar.jpeg') center/cover;
+    position:relative;
+}
+
+.image-count{
+    position:absolute;
+    bottom:15px;
+    right:15px;
+    background:rgba(0,0,0,0.6);
+    color:#fff;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:14px;
+}
+
+/* INFO SUPERIOR */
+.top-info{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px 15px;
+    font-size:14px;
+    background:#fdf5e6;
+    color:#2e7d32;
+    font-weight:500;
+}
+
+.top-info span{
+    display:flex;
+    align-items:center;
+    gap:5px;
+}
+
+/* DESCRIPCIÓN */
+.description{
+    padding:15px;
+    font-size:14px;
+    line-height:1.5;
+    color:#333;
+}
+
+/* VENDEDOR */
+.seller{
+    padding:0 15px 15px 15px;
+    font-size:14px;
+    color:#444;
+}
+
+.seller .badge{
+    display:inline-block;
+    background:#e8f5e9;
+    color:#2e7d32;
+    padding:6px 10px;
+    border-radius:20px;
+    font-size:13px;
+    margin-top:8px;
+}
+
+/* PRECIO */
+.price-section{
+    padding:15px;
+}
+
+.old-price{
+    text-decoration:line-through;
+    color:#999;
+    font-size:14px;
+}
+
+.price{
+    font-size:28px;
+    font-weight:700;
+    margin:5px 0;
+}
+
+.discount{
+    display:inline-block;
+    background:#fff3e0;
+    color:#ef6c00;
+    padding:5px 10px;
+    border-radius:8px;
+    font-size:13px;
+    font-weight:500;
+    margin-right:5px;
+}
+
+.installments{
+    margin-top:10px;
+    font-size:14px;
+    color:#ef6c00;
+}
+
+/* TAMAÑO */
+.size{
+    padding:15px;
+    font-size:14px;
+    border-top:1px solid #eee;
+}
+
+.opinion{
+    padding:0 15px 15px 15px;
+    font-size:13px;
+    color:#777;
+}
+
+/* CANTIDAD */
+.quantity{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:0 15px 20px 15px;
+}
+
+.qty-box{
+    display:flex;
+    align-items:center;
+    border:1px solid #ccc;
+    border-radius:8px;
+    overflow:hidden;
+}
+
+.qty-box button{
+    width:35px;
+    height:35px;
+    border:none;
+    background:#f5f5f5;
+    font-size:18px;
+    cursor:pointer;
+}
+
+.qty-box span{
+    width:40px;
+    text-align:center;
+}
+
+/* BOTÓN FIJO */
+.buy-bar{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    background:#ff6f00;
+    padding:15px;
+    text-align:center;
+    color:#fff;
+    font-weight:700;
+    font-size:16px;
+}
+
+.buy-bar small{
+    display:block;
+    font-weight:400;
+    font-size:13px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="product-image">
+        <div class="image-count">1/7</div>
+    </div>
+
+    <div class="top-info">
+        <span>✔ Envío gratis</span>
+        <span>✔ $1.00 de crédito por retraso</span>
+    </div>
+
+    <div class="description">
+        En SV en al menos <strong style="background:#2e7d32;color:#fff;padding:2px 6px;border-radius:5px;">2 días hábiles</strong> después del envío <br><br>
+        1pc Pulsera de Cadena Serpiente Estrella en Acero Inoxidable 316L de 3mm de Ancho – Ajustable 18cm+5cm,
+        Joyería Minimalista Duradera para Hombres y Mujeres, Regalo de Cumpleaños o Fiesta, Diseño Moderno con Cierre Seguro
+    </div>
+
+    <div class="seller">
+        Vendido por ●
+        <div class="badge">#3 Más vendidos | 10K+ ventas | ⭐ 4.8</div>
+    </div>
+
+    <div class="price-section">
+        <div class="old-price">$10.79</div>
+        <div class="price">$5.35</div>
+        <span class="discount">87% DE DESCUENTO</span>
+        <span class="discount">ÚLTIMOS</span>
+
+        <div class="installments">
+            Pago a plazos con tarjeta de crédito, $0.12 por plazo
+        </div>
+    </div>
+
+    <div class="size">
+        Tamaño: 18 CM + 5 CM (7,09 + 1,97 Pulgadas)
+    </div>
+
+    <div class="opinion">
+        92% de los clientes opinan que la talla es adecuada
+    </div>
+
+    <div class="quantity">
+        Cant.
+        <div class="qty-box">
+            <button>-</button>
+            <span>1</span>
+            <button>+</button>
+        </div>
+    </div>
+
+</div>
+
+<div class="buy-bar">
+    ¡AGRÉGALO AHORA! ¡LOS ÚLTIMOS!
+    <small>Llega a SV en 2+ días hábiles después del envío</small>
+</div>
+
+</body>
+</html>
