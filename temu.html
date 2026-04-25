@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,248 +6,228 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Producto</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
 <style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: 'Roboto', sans-serif;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
 }
 
-body{
-    background:#f5f5f5;
-}
-
-/* CONTENEDOR GENERAL */
-.container{
-    max-width:500px;
-    margin:auto;
-    background:#fff;
-    min-height:100vh;
+/* CONTENEDOR TIPO CELULAR */
+.container {
+  background: white;
+  width: 100%;
+  max-width: 420px;
+  min-height: 100vh;
 }
 
 /* IMAGEN */
-.product-image{
-    width:100%;
-    height:400px;
-    background:url('Imagenes/collar.jpeg') center/cover;
-    position:relative;
+.image img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-.image-count{
-    position:absolute;
-    bottom:15px;
-    right:15px;
-    background:rgba(0,0,0,0.6);
-    color:#fff;
-    padding:6px 12px;
-    border-radius:20px;
-    font-size:14px;
+/* INFO */
+.info {
+  padding: 12px;
 }
 
-/* INFO SUPERIOR */
-.top-info{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:10px 15px;
-    font-size:14px;
-    background:#fdf5e6;
-    color:#2e7d32;
-    font-weight:500;
+.credito {
+  color: #555;
+  font-size: 12px;
 }
 
-.top-info span{
-    display:flex;
-    align-items:center;
-    gap:5px;
+.envio {
+  background: #0a9f3f;
+  color: white;
+  padding: 6px;
+  border-radius: 5px;
+  font-size: 12px;
+  margin: 8px 0;
+  text-align: center;
 }
 
-/* DESCRIPCIÓN */
-.description{
-    padding:15px;
-    font-size:14px;
-    line-height:1.5;
-    color:#333;
+.titulo {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 8px 0;
 }
 
-/* VENDEDOR */
-.seller{
-    padding:0 15px 15px 15px;
-    font-size:14px;
-    color:#444;
+.rating {
+  color: #666;
+  font-size: 13px;
+  margin-bottom: 8px;
 }
 
-.seller .badge{
-    display:inline-block;
-    background:#e8f5e9;
-    color:#2e7d32;
-    padding:6px 10px;
-    border-radius:20px;
-    font-size:13px;
-    margin-top:8px;
+/* NUEVO PRECIO */
+.precio-box {
+  margin-top: 5px;
 }
 
-/* PRECIO */
-.price-section{
-    padding:15px;
+.fila1 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.old-price{
-    text-decoration:line-through;
-    color:#999;
-    font-size:14px;
+.precio-grande {
+  font-size: 26px;
+  font-weight: bold;
+  color: #000;
 }
 
-.price{
-    font-size:28px;
-    font-weight:700;
-    margin:5px 0;
+.precio-tachado {
+  text-decoration: line-through;
+  color: #999;
 }
 
-.discount{
-    display:inline-block;
-    background:#fff3e0;
-    color:#ef6c00;
-    padding:5px 10px;
-    border-radius:8px;
-    font-size:13px;
-    font-weight:500;
-    margin-right:5px;
+.precio-est {
+  color: #666;
+  font-size: 13px;
 }
 
-.installments{
-    margin-top:10px;
-    font-size:14px;
-    color:#ef6c00;
+.fila2 {
+  font-size: 12px;
+  color: #666;
+  margin-top: 3px;
 }
 
-/* TAMAÑO */
-.size{
-    padding:15px;
-    font-size:14px;
-    border-top:1px solid #eee;
+.etiquetas {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
 }
 
-.opinion{
-    padding:0 15px 15px 15px;
-    font-size:13px;
-    color:#777;
+.descuento {
+  border: 1px solid #ff6a00;
+  color: #ff6a00;
+  padding: 3px 6px;
+  border-radius: 5px;
+  font-size: 12px;
 }
 
-/* CANTIDAD */
-.quantity{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    padding:0 15px 20px 15px;
+.stock {
+  background: #ff6a00;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-size: 12px;
 }
 
-.qty-box{
-    display:flex;
-    align-items:center;
-    border:1px solid #ccc;
-    border-radius:8px;
-    overflow:hidden;
+/* MENSAJE */
+.mensaje {
+  background: #f5e3d3;
+  padding: 10px;
+  font-size: 13px;
+  text-align: center;
+  color: #8a5a2b;
+  margin-top: 10px;
 }
 
-.qty-box button{
-    width:35px;
-    height:35px;
-    border:none;
-    background:#f5f5f5;
-    font-size:18px;
-    cursor:pointer;
+/* BARRA INFERIOR */
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 420px;
+  padding: 10px;
+  background: white;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
 }
 
-.qty-box span{
-    width:40px;
-    text-align:center;
+/* BOTÓN GRANDE */
+.btn-big {
+  width: 100%;
+  background: linear-gradient(45deg, #ff6a00, #ff8c00);
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
 }
 
-/* BOTÓN FIJO */
-.buy-bar{
-    position:fixed;
-    bottom:0;
-    left:0;
-    width:100%;
-    background:#ff6f00;
-    padding:15px;
-    text-align:center;
-    color:#fff;
-    font-weight:700;
-    font-size:16px;
+.btn-big span {
+  display: block;
+  font-size: 12px;
+  font-weight: normal;
+  margin-top: 2px;
 }
 
-.buy-bar small{
-    display:block;
-    font-weight:400;
-    font-size:13px;
+/* ESPACIO ABAJO */
+body::after {
+  content: "";
+  display: block;
+  height: 90px;
 }
-
 </style>
-</head>
 
+</head>
 <body>
 
 <div class="container">
 
-    <div class="product-image">
-        <div class="image-count">1/7</div>
+  <div class="image">
+    <img src="img/camisa.png" alt="producto">
+  </div>
+
+  <div class="info">
+
+    <p class="credito">✔ $1.00 de crédito por retraso</p>
+
+    <div class="envio">
+      ✔ Envío gratis 🚚 En SV en al menos 4 días hábiles
     </div>
 
-    <div class="top-info">
-        <span>✔ Envío gratis</span>
-        <span>✔ $1.00 de crédito por retraso</span>
+    <h2 class="titulo">
+      Camisa Sin Mangas a Rayas Moderna, Ideal para Oficina, Hogar y Citas
+    </h2>
+
+    <div class="rating">
+      ⭐ Vendedor estrella &nbsp;&nbsp; 5.0 ★ | 171 ventas
     </div>
 
-    <div class="description">
-        En SV en al menos <strong style="background:#2e7d32;color:#fff;padding:2px 6px;border-radius:5px;">2 días hábiles</strong> después del envío <br><br>
-        1pc Pulsera de Cadena Serpiente Estrella en Acero Inoxidable 316L de 3mm de Ancho – Ajustable 18cm+5cm,
-        Joyería Minimalista Duradera para Hombres y Mujeres, Regalo de Cumpleaños o Fiesta, Diseño Moderno con Cierre Seguro
+    <!-- NUEVO BLOQUE DE PRECIO -->
+    <div class="precio-box">
+
+      <div class="fila1">
+        <span class="precio-grande">$13.00</span>
+        <span class="precio-tachado">$20.00</span>
+        <span class="precio-est">Est. $9.34</span>
+      </div>
+
+      <div class="fila2">
+        después de las promociones
+      </div>
+
+      <div class="etiquetas">
+        <span class="descuento">41% DE DESCUENTO</span>
+        <span class="stock">⏳ SOLO QUEDAN 5</span>
+      </div>
+
     </div>
 
-    <div class="seller">
-        Vendido por ●
-        <div class="badge">#3 Más vendidos | 10K+ ventas | ⭐ 4.8</div>
+    <div class="mensaje">
+      🛒 Agrega este artículo para disfrutar de <b>$1.13 DE DTO.</b>
     </div>
 
-    <div class="price-section">
-        <div class="old-price">$10.79</div>
-        <div class="price">$5.35</div>
-        <span class="discount">87% DE DESCUENTO</span>
-        <span class="discount">ÚLTIMOS</span>
-
-        <div class="installments">
-            Pago a plazos con tarjeta de crédito, $0.12 por plazo
-        </div>
+    <div class="plazos">
+      Pago a plazos con tarjeta: $0.73 por plazo
     </div>
 
-    <div class="size">
-        Tamaño: 18 CM + 5 CM (7,09 + 1,97 Pulgadas)
-    </div>
-
-    <div class="opinion">
-        92% de los clientes opinan que la talla es adecuada
-    </div>
-
-    <div class="quantity">
-        Cant.
-        <div class="qty-box">
-            <button>-</button>
-            <span>1</span>
-            <button>+</button>
-        </div>
-    </div>
+  </div>
 
 </div>
 
-<div class="buy-bar">
-    ¡AGRÉGALO AHORA! ¡LOS ÚLTIMOS!
-    <small>Llega a SV en 2+ días hábiles después del envío</small>
+<div class="bottom-bar">
+  <button class="btn-big">
+    ⏳ ¡AGREGA LAS ÚLTIMAS 5!
+    <span>Llega a SV en tan solo 3 días hábiles</span>
+  </button>
 </div>
 
 </body>
